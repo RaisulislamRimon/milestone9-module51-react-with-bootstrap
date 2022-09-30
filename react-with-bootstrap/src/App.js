@@ -13,6 +13,11 @@ function App() {
       <button type="button" className="btn btn-light">Light</button>
       <button type="button" className="btn btn-dark">Dark</button>
       <button type="button" className="btn btn-link">Link</button>
+      <br />
+      {/* spinner */}
+      <div className="spinner-border text-danger" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
     </div>
   );
 }
