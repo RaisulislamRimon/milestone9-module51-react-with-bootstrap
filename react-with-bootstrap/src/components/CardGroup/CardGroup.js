@@ -1,36 +1,45 @@
-import React from 'react'
+import React from "react";
+import Card from "../Card/Card";
 
 const cardGroup = () => {
+
+    const products = [
+
+        {
+            id: 1,
+            title: "Card Title 1",
+            text: "Some quick example text to build on the card title and make up the bulk of the card content.",
+        },
+        {
+            id: 2,
+            title: "Card Title 2",
+            text: "Some quick example text to build on the card title and make up the bulk of the card content.",
+        },
+
+        {
+            id: 3,
+            title: "Card Title 3",
+            text: "Some quick example text to build on the card title and make up the bulk of the card content.",
+        },
+
+        {
+            id: 4,
+            title: "Card Title 4",
+            text: "Some quick example text to build on the card title and make up the bulk of the card content.",
+        },
+    ];
+
     return (
         <div>
             <div className="card-group">
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
+                {products.map((card) => (
+                    <Card card={card}>
+
+                    </Card>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default cardGroup;
