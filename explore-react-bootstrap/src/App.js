@@ -9,6 +9,8 @@ function App() {
       <button>Simple Button</button>
       <Button>React Bootstrap Button</Button>
       <Button variant='danger'>React Bootstrap Button</Button>
+      <Spinner animation="grow" variant="danger" />
+
     </div>
   );
 }
