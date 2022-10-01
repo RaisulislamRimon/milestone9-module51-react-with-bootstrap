@@ -1,6 +1,6 @@
-import React from 'react';
-import Edit from './components/Edit/Edit';
-import Navbar from './components/Navbar/Navbar';
+import React from "react";
+import Edit from "./components/Edit/Edit";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (

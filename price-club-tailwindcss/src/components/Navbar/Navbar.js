@@ -11,7 +11,7 @@ const Navbar = () => {
   ];
   return (
     <nav>
-      <ul>
+      <ul className="md:flex justify-center text-2xl">
         {routes.map((route) => (
           <div key={route.id}>
             <Link route={route} />
