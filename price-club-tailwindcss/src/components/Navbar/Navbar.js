@@ -4,6 +4,7 @@ import Link from "../Link/Link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   const routes = [
     { id: 1, name: "Home", path: "/home" },
     { id: 2, name: "Products", path: "/products" },
