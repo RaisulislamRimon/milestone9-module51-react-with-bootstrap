@@ -13,21 +13,14 @@ const Navbar = () => {
   ];
   return (
     <nav>
-      {open ? (
-        <XMarkIcon
-          onClick={() => {
-            setOpen(!open);
-          }}
-          className="h-6 w-6"
-        />
-      ) : (
-        <Bars3Icon
-          onClick={() => {
-            setOpen(!open);
-          }}
-          className="h-6 w-6"
-        />
-      )}
+      <div
+        onClick={() => {
+          setOpen(!open);
+        }}
+        className="h-16 w-16 md:hidden"
+      >
+        {open ? <XMarkIcon /> : <Bars3Icon />}
+      </div>
       {/* <Bars3Icon
         onClick={() => {
           setOpen(!open);
@@ -35,11 +28,14 @@ const Navbar = () => {
         className="h-6 w-6"
       />
       <span>{open ? "open" : "closed"}</span> */}
-      <ul className="md:flex justify-center text-2xl">
+      <ul
+        className={`md:flex justify-center text-2xl relative ${
+          //   open ? `top-20` : `top-[20px]`
+          open ? `show m-auto` : `hidden`
+        }`}
+      >
         {routes.map((route) => (
-          <div key={route.id}>
-            <Link route={route} />
-          </div>
+          <Link key={route.id} route={route} />
         ))}
       </ul>
     </nav>
