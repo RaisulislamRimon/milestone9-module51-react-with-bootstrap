@@ -6,10 +6,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const routes = [
     { id: 1, name: "Home", path: "/home" },
-    { id: 2, name: "About", path: "/about" },
-    { id: 3, name: "Contact", path: "/contact" },
-    { id: 4, name: "Login", path: "/login" },
-    { id: 5, name: "Register", path: "/register" },
+    { id: 2, name: "Products", path: "/products" },
+    { id: 3, name: "Orders", path: "/orders" },
+    { id: 4, name: "Contact", path: "/contact" },
+    { id: 5, name: "About", path: "/about" },
   ];
   return (
     <nav>
@@ -29,7 +29,7 @@ const Navbar = () => {
       />
       <span>{open ? "open" : "closed"}</span> */}
       <ul
-        className={`md:flex justify-center text-2xl relative ${
+        className={`md:flex justify-center text-2xl relative duration-500 ease-in ${
           //   open ? `top-20` : `top-[20px]`
           open ? `show m-auto` : `hidden`
         }`}
